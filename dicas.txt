@@ -1,0 +1,9 @@
+dentro do tools/bin do Android executar
+sdkmanager --install "cmdline-tools;latest"
+e com o celular ja configurado ele vai pedir autorização, so confirmar
+
+//// criar projeto
+flutter create nomeDoProjeto
+//// rodar projeto
+flutter run
+
