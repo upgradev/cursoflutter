@@ -3,6 +3,4 @@ class Cliente {
   String? cpf;
 
   Cliente({this.nome, this.cpf});
-
-  
 }
