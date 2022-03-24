@@ -7,3 +7,8 @@ flutter create nomeDoProjeto
 //// rodar projeto
 flutter run
 
+//// pacote para mexer com data
+no arquivo pubspec.yaml, na dependencia incluir: intl: ^0.17.0
+
+
+
