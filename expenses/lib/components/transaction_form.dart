@@ -43,6 +43,24 @@ class _TransactionFormState extends State<TransactionForm> {
               keyboardType: const TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (_) => _submitForm(),
             ),
+            Container(
+              height: 70,
+              child: Row(
+                children: [
+                  Text("Nenhuma data selecionada"),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Selecionar data",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
+                  ),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -50,7 +68,11 @@ class _TransactionFormState extends State<TransactionForm> {
                   onPressed: _submitForm,
                   child: const Text(
                     'Nova Transação',
-                    style: TextStyle(color: Colors.purple),
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Theme.of(context).primaryColor,
+                    
                   ),
                 ),
               ],

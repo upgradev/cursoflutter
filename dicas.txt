@@ -10,5 +10,5 @@ flutter run
 //// pacote para mexer com data
 no arquivo pubspec.yaml, na dependencia incluir: intl: ^0.17.0
 
-
-
+//// fonts e images
+baixar a font, criar a pasta assets/fonts, colocar as fonts e configurar no pubspec.yaml
