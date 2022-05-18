@@ -22,12 +22,15 @@ class _NavegacaoState extends State<Navegacao> {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TelaSecundaria(valor: "Teste"),
-                  ),
-                );
+                // rotas nomeadas
+                Navigator.pushNamed(context, "/secundaria");
+
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => TelaSecundaria(valor: "Teste"),
+                //   ),
+                // );
               },
               child: Text("Ir para a segunda tela!"),
               style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
