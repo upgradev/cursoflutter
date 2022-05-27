@@ -1,4 +1,5 @@
 import 'package:consumo_servico_avancado/Home.dart';
+import 'package:consumo_servico_avancado/ListaItens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: const ListaItens(),
     );
   }
 }
