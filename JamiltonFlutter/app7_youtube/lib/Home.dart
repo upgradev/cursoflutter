@@ -1,3 +1,4 @@
+import 'package:app7_youtube/CustomSearchDelegate.dart';
 import 'package:app7_youtube/telas/Biblioteca.dart';
 import 'package:app7_youtube/telas/EmAlta.dart';
 import 'package:app7_youtube/telas/Inicio.dart';
@@ -12,12 +13,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String _resultado = "";
   int _indiceAtual = 0;
 
   @override
   Widget build(BuildContext context) {
     List<Widget> telas = [
-      Inicio(),
+      Inicio(_resultado),
       EmAlta(),
       Inscricao(),
       Biblioteca(),
@@ -37,25 +39,35 @@ class _HomeState extends State<Home> {
         ),
         actions: [
           IconButton(
-            onPressed: () {
-              print("Videocam");
-            },
-            icon: Icon(Icons.videocam),
-          ),
-          IconButton(
-              onPressed: () {
-                print("pesquisa");
+              onPressed: () async {
+                String? res = await showSearch(
+                  context: context,
+                  delegate: CustomSearchDelegate(),
+                );
+                setState(() {
+                  _resultado = res!;
+                });
               },
               icon: Icon(Icons.search)),
-          IconButton(
-            onPressed: () {
-              print("conta");
-            },
-            icon: Icon(Icons.account_circle),
-          ),
+          // IconButton(
+          //   onPressed: () {
+          //     print("Videocam");
+          //   },
+          //   icon: Icon(Icons.videocam),
+          // ),
+
+          // IconButton(
+          //   onPressed: () {
+          //     print("conta");
+          //   },
+          //   icon: Icon(Icons.account_circle),
+          // ),
         ],
       ),
-      body: telas[_indiceAtual],
+      body: Container(
+        padding: EdgeInsets.all(16),
+        child: telas[_indiceAtual],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: Colors.red,
         type: BottomNavigationBarType.fixed,
