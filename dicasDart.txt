@@ -1,0 +1,16 @@
+instalação dart
+https://dart.dev/get-dart
+export PATH="$PATH:/usr/lib/dart/bin"
+echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+
+em settings do vscode
+dart linelength de 80 para 240
+dart previewflutter e selcionar preview flutter ui guides e preview flutter ui guides Tracking
+dart closing labels -> selecionar se não estiver
+
+/// criar o projeto dart
+ir em cntrl + p depois new dart project
+escolher simple console apllication
+escolher o diretorio, dar o nome do projeto e esperar baixar
+compatibilidade
+depois ir no arquivo pubspec.yaml e altera a versão do sdk para 2.7.0 

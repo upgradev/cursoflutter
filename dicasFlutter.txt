@@ -1,0 +1,39 @@
+/// links
+https://viacep.com.br/
+https://www.blockchain.com/pt/api/exchange_rates_api
+https://blockchain.info/ticker
+https://jsonplaceholder.typicode.com/
+
+https://developers.google.com/youtube/v3/
+
+
+
+dentro do tools/bin do Android executar
+sdkmanager --install "cmdline-tools;latest"
+e com o celular ja configurado ele vai pedir autorização, so confirmar
+
+//// criar projeto
+flutter create nomeDoProjeto
+//// rodar projeto
+flutter run
+
+//// pacote para mexer com data
+no arquivo pubspec.yaml, na dependencia incluir: intl: ^0.17.0
+
+//// fonts e images
+baixar a font, criar a pasta assets/fonts, colocar as fonts e configurar no pubspec.yaml
+
+/// Estudar no novo flutter
+Dicas -> usar isso sem o Widget estar com constante (const)
+fontSize: 20 *  MediaQuery.of(context).textScaleFactor -> para resolução de fonte automatico do dispositivo
+const tamanho = height: constraints.maxHeight * 0.6, para o sizeBox
+
+
+//// http
+import 'package:http/http.dart' as http;
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+/////flutter cannot run with sound null safety, because the following dependencies don't support null safety
+flutter run --no-sound-null-safety
+
